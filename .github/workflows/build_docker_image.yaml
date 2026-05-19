@@ -12,7 +12,7 @@ jobs:
     runs-on: ubuntu-latest
 
     env:
-      IMG_NAME: 'Dockerfile'
+      IMG_NAME: 'dockerfile'
       FOLDER_NAME: 'dockerfiles'
       REPO_URL: 'test_url'
 
