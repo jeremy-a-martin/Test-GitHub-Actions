@@ -4,15 +4,23 @@ on:
   push:
     branches:
       - main
+    paths:
+      - 'testfiles/**'
 
 jobs:
   test-build:
     runs-on: ubuntu-latest
+
+    env:
+      IMG_NAME: 'my-ignition-image'
+      FOLDER_NAME: 'dockerfiles'
+      REPO_URL: 'test_url'
 
     steps:
       - name: Checkout code
         uses: actions/checkout@v6
       - name: build image
         run: |
-          docker build -t my-ignition-image ./dockerfiles
+          cd $FOLDER_NAME
+          docker build $IMG_NAME -t $REPO_URL/$IMG_NAME:$GITHUB_SHA -t $REPO_URL/$IMG_NAME:latest
           docker images
