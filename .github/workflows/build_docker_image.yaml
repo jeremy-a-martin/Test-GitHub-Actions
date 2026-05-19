@@ -12,7 +12,7 @@ jobs:
     runs-on: ubuntu-latest
 
     env:
-      IMG_NAME: 'my-ignition-image'
+      IMG_NAME: 'Dockerfile'
       FOLDER_NAME: 'dockerfiles'
       REPO_URL: 'test_url'
 
