@@ -1,11 +1,11 @@
 name: Build Docker Image
 
 on:
-  push:
-    branches:
-      - main
-    paths:
-      - 'testfiles/**'
+  schedule:
+    # Runs every 5 minutes
+    - cron: '*/5 * * * *'
+  # Allow manual triggering of the workflow
+  workflow_dispatch:
 
 jobs:
   test-build:
