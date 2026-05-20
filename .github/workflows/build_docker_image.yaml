@@ -1,10 +1,7 @@
 name: Build Docker Image
 
 on:
-  # Allow manual triggering of the workflow
-  workflow_dispatch:
   schedule:
-    # Runs every 5 minutes test
     - cron: '*/5 * * * *'
 
 jobs:
