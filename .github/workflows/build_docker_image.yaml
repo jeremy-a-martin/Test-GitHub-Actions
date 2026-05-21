@@ -28,4 +28,4 @@ jobs:
           docker build -t $REPO_URL/$IMG_NAME:$GITHUB_SHA -t $REPO_URL/$IMG_NAME:latest ./$FOLDER_NAME
           docker build -t $REPO_URL/$IMG_NAME2:$GITHUB_SHA -t $REPO_URL/$IMG_NAME2:latest ./$FOLDER_NAME2
           docker images
-          echo "Docker images built successfully"
+          echo "testing develop"
