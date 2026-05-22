@@ -4,6 +4,7 @@ on:
   schedule:
     # Runs every 5 minutes test
     - cron: '*/5 * * * *'
+      timezone: 'America/New_York'
   # Allow manual triggering of the workflow
   workflow_dispatch:
 
@@ -28,4 +29,3 @@ jobs:
           docker build -t $REPO_URL/$IMG_NAME:$GITHUB_SHA -t $REPO_URL/$IMG_NAME:latest ./$FOLDER_NAME
           docker build -t $REPO_URL/$IMG_NAME2:$GITHUB_SHA -t $REPO_URL/$IMG_NAME2:latest ./$FOLDER_NAME2
           docker images
-          echo "Docker images built successfully"
